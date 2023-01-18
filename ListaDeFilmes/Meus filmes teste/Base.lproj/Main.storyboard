@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GbP-ab-fhv">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Meus filmes-->
+        <scene sceneID="F1E-Zp-X2Q">
+            <objects>
+                <tableViewController id="08K-lz-tM6" customClass="ViewController" customModule="MeusFilmes" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" id="PsN-1x-aPl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="celula" id="uS5-kb-Vtc" customClass="FilmeCelula" customModule="MeusFilmes" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="414" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uS5-kb-Vtc" id="yqe-4y-IMp">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="F8V-ZN-kAH">
+                                            <rect key="frame" x="8" y="8" width="84" height="84"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="84" id="4YH-ZB-gyi"/>
+                                                <constraint firstAttribute="height" constant="84" id="rBm-KC-fGH"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="42"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </imageView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="rHa-pl-q2A">
+                                            <rect key="frame" x="117.99999999999999" y="30.333333333333332" width="52.333333333333329" height="39.333333333333343"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EVS-HO-Qkh">
+                                                    <rect key="frame" x="0.0" y="0.0" width="52.333333333333336" height="24"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q2V-Ci-Z0u">
+                                                    <rect key="frame" x="0.0" y="24.000000000000004" width="52.333333333333336" height="15.333333333333332"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                                    <color key="textColor" red="0.43089393911117746" green="0.43516021573604058" blue="0.43516021573604058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="rHa-pl-q2A" firstAttribute="leading" secondItem="F8V-ZN-kAH" secondAttribute="trailing" constant="26" id="FR1-gj-I93"/>
+                                        <constraint firstItem="rHa-pl-q2A" firstAttribute="centerY" secondItem="yqe-4y-IMp" secondAttribute="centerY" id="QoG-bh-1oO"/>
+                                        <constraint firstItem="F8V-ZN-kAH" firstAttribute="centerY" secondItem="yqe-4y-IMp" secondAttribute="centerY" id="axj-Pa-YmC"/>
+                                        <constraint firstItem="F8V-ZN-kAH" firstAttribute="leading" secondItem="yqe-4y-IMp" secondAttribute="leading" constant="8" id="tN3-hw-Dcz"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="descricaoLabel" destination="q2V-Ci-Z0u" id="tJI-9z-zMn"/>
+                                    <outlet property="filmeImageView" destination="F8V-ZN-kAH" id="rQr-z8-8kn"/>
+                                    <outlet property="tituloLabel" destination="EVS-HO-Qkh" id="YLI-jZ-WK3"/>
+                                    <segue destination="OW9-py-WTl" kind="show" identifier="detalheFilme" id="cU4-9I-cvv"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="08K-lz-tM6" id="63K-7p-z2U"/>
+                            <outlet property="delegate" destination="08K-lz-tM6" id="R2c-tr-ru6"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Meus filmes" id="sFm-Pe-QhE"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IJ1-FQ-iPG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="412" y="126.38680659670166"/>
+        </scene>
+        <!--Detalhes Filme View Controller-->
+        <scene sceneID="0X8-ed-uCW">
+            <objects>
+                <viewController id="OW9-py-WTl" customClass="DetalhesFilmeViewController" customModule="MeusFilmes" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tbG-bn-097"/>
+                        <viewControllerLayoutGuide type="bottom" id="HgV-bB-0YV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8zf-YU-5F7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="filme2" translatesAutoresizingMaskIntoConstraints="NO" id="tMw-ej-b41">
+                                <rect key="frame" x="20" y="96" width="343" height="361"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Titulo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tsj-pw-XH9">
+                                <rect key="frame" x="20" y="465" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Descricao" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kdz-0a-zS9">
+                                <rect key="frame" x="20" y="494" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                <color key="textColor" red="0.46576442283766295" green="0.4703759517766497" blue="0.4703759517766497" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="descricaoLabel" destination="kdz-0a-zS9" id="RG6-6c-INr"/>
+                        <outlet property="filmeImageView" destination="tMw-ej-b41" id="sqd-az-KwG"/>
+                        <outlet property="tituloLabel" destination="Tsj-pw-XH9" id="4Ko-ol-bXE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q23-ZT-8w8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1213.5999999999999" y="124.58770614692655"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zH3-mP-rL0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GbP-ab-fhv" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qnw-oW-1Ep">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="08K-lz-tM6" kind="relationship" relationship="rootViewController" id="JDW-jT-qhQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X91-uW-ysA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-273" y="126"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="filme2" width="252.66667175292969" height="268.33334350585938"/>
+    </resources>
+</document>
